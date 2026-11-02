@@ -1,0 +1,16 @@
+{
+  "brand": "Patria Ingeniería Pavimentos y Agregados S.A.S.",
+  "source": "Azul, grises y negro confirmados mediante las capturas de color proporcionadas por la usuaria. La interfaz utiliza estos colores y blanco.",
+  "colors": {
+    "blue": { "hex": "#01557B", "cssVariable": "--brand-blue", "role": "Principal; color confirmado" },
+    "blueDeep": { "hex": "#000000", "cssVariable": "--brand-blue-deep", "role": "Alias de negro para fondos oscuros" },
+    "blueLight": { "hex": "#CCD1D4", "cssVariable": "--brand-blue-light", "role": "Alias de plata para acentos sobre azul o negro" },
+    "graphite": { "hex": "#4F565E", "cssVariable": "--brand-graphite", "role": "Gris oscuro; color confirmado" },
+    "silver": { "hex": "#CCD1D4", "cssVariable": "--brand-silver", "role": "Gris claro; color confirmado" },
+    "black": { "hex": "#000000", "cssVariable": "--brand-black", "role": "Negro; color confirmado" },
+    "white": { "hex": "#FFFFFF", "cssVariable": "--brand-white", "role": "Superficie y texto claro" },
+    "canvas": { "hex": "#FFFFFF", "cssVariable": "--brand-canvas", "role": "Superficie clara" },
+    "border": { "hex": "#CCD1D4", "cssVariable": "--brand-border", "role": "Bordes; alias del gris claro" },
+    "error": { "hex": "#000000", "cssVariable": "--brand-error", "role": "Errores de formulario con texto explicativo" }
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Paleta visual de Patria Ingeniería</title>
+  <desc id="desc">Muestras de azul, grafito, plata, negro y blanco de Patria Ingeniería.</desc>
+  <rect width="960" height="520" fill="#FFFFFF"/>
+  <text x="36" y="53" fill="#000000" font-family="Arial,sans-serif" font-weight="700" font-size="29">PATRIA INGENIERÍA</text>
+  <text x="36" y="79" fill="#4F565E" font-family="Arial,sans-serif" font-size="15">Colores principales confirmados por las muestras enviadas</text>
+  <g font-family="Arial,sans-serif" font-size="15">
+    <rect x="36" y="112" width="270" height="140" fill="#01557B"/><text x="52" y="219" fill="#FFFFFF" font-weight="700">Azul principal · #01557B</text>
+    <rect x="326" y="112" width="270" height="140" fill="#4F565E"/><text x="342" y="219" fill="#FFFFFF" font-weight="700">Grafito · #4F565E</text>
+    <rect x="616" y="112" width="308" height="140" fill="#CCD1D4"/><text x="632" y="219" fill="#000000" font-weight="700">Plata · #CCD1D4</text>
+    <rect x="36" y="272" width="270" height="140" fill="#01557B"/><text x="52" y="379" fill="#FFFFFF" font-weight="700">Azul · #01557B</text>
+    <rect x="326" y="272" width="270" height="140" fill="#000000"/><text x="342" y="379" fill="#FFFFFF" font-weight="700">Negro · #000000</text>
+    <rect x="616" y="272" width="145" height="140" fill="#FFFFFF" stroke="#CCD1D4"/><text x="632" y="379" fill="#000000" font-weight="700">Blanco</text>
+    <rect x="779" y="272" width="145" height="140" fill="#CCD1D4"/><text x="795" y="379" fill="#000000" font-weight="700">#CCD1D4</text>
+  </g>
+  <text x="36" y="468" fill="#4F565E" font-family="Arial,sans-serif" font-size="14">Editar los colores del sitio en styles/tokens.css</text>
+</svg>

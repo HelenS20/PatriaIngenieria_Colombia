@@ -1,0 +1,13 @@
+/* Paleta del logo de Patria. Las superficies usan solo estos colores y blanco. */
+:root {
+  --brand-blue: #01557b;
+  --brand-blue-deep: #000000;
+  --brand-blue-light: #ccd1d4;
+  --brand-graphite: #4f565e;
+  --brand-silver: #ccd1d4;
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+  --brand-canvas: #ffffff;
+  --brand-border: var(--brand-silver);
+  --brand-error: #000000;
+}
