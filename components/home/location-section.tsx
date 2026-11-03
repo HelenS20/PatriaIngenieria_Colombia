@@ -1,8 +1,8 @@
 export function LocationSection() {
   return (
     <section className="mapBlock" data-reveal>
-      <div className="locationMap" aria-label="Esquema ilustrativo de la ubicación de referencia de Dromos en Mosquera">
-        <div className="locationMapTop"><span>REFERENCIA DE UBICACIÓN</span><span>MOSQUERA · CUNDINAMARCA</span></div>
+      <div className="locationMap" aria-label="Esquema ilustrativo de la ubicación de Patria Ingeniería en Mosquera">
+        <div className="locationMapTop"><span>UBICACIÓN</span><span>MOSQUERA · CUNDINAMARCA</span></div>
         <svg className="locationMapDrawing" viewBox="0 0 700 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <defs>
             <pattern id="location-grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#ccd1d4" strokeOpacity=".17" strokeWidth="1" /></pattern>
@@ -19,24 +19,24 @@ export function LocationSection() {
           <circle className="mapPlantHalo" cx="205" cy="295" r="38" />
           <circle className="mapPlantRing" cx="205" cy="295" r="25" />
           <circle className="mapPlantDot" cx="205" cy="295" r="8" />
-          <text className="mapLabel mapLabelStrong" x="170" y="250">DROMOS</text>
-          <text className="mapLabel" x="165" y="267">BALSILLAS</text>
-          <text className="mapLabel" x="340" y="265">MOSQUERA</text>
-          <text className="mapLabel" x="516" y="255">SABANA</text>
-          <text className="mapRouteLabel" x="282" y="331">RUTA ILUSTRATIVA</text>
+          <text className="mapLabel mapLabelStrong" x="170" y="250">PATRIA</text>
+          <text className="mapLabel" x="175" y="267">MOSQUERA</text>
+          <text className="mapLabel" x="340" y="265">SABANA</text>
+          <text className="mapLabel" x="516" y="255">BOGOTÁ</text>
+          <text className="mapRouteLabel" x="282" y="331">CORREDOR LOGÍSTICO</text>
         </svg>
         <div className="locationMapCard">
-          <span>01 / DIRECCIÓN DE REFERENCIA</span>
-          <p>Km 3.8, Zona Industrial Balsillas<br />Mosquera, Cundinamarca.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Km+3.8+Zona+Industrial+Balsillas+Mosquera+Cundinamarca" target="_blank" rel="noopener noreferrer">VER EN MAPAS <span aria-hidden="true">↗</span></a>
+          <span>01 / UBICACIÓN</span>
+          <p>Mosquera, Cundinamarca.<br />Zona industrial.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Mosquera+Cundinamarca+zona+industrial" target="_blank" rel="noopener noreferrer">VER EN MAPAS <span aria-hidden="true">↗</span></a>
         </div>
         <span className="locationMapNote">ESQUEMA ILUSTRATIVO · NO A ESCALA</span>
       </div>
       <div className="locationCopy">
-        <p className="eyebrow">Ubicación de referencia</p>
+        <p className="eyebrow">Nuestra operación</p>
         <h2>UN PUNTO<br /><i>DE PARTIDA.</i></h2>
-        <p className="lede">Esta es la dirección pública de Dromos que usaste como inspiración. El mapa animado es ilustrativo y la dirección no corresponde a una sede confirmada de Patria. Sustitúyela al recibir la información oficial de la empresa.</p>
-        <div className="locationFacts"><span><b>01</b> BALSILLAS · MOSQUERA</span><span><b>02</b> REFERENCIA DROMOS</span></div>
+        <p className="lede">Operamos desde Mosquera, Cundinamarca, con acceso al corredor logístico de la Sabana de Bogotá y conectividad regional para atender obras en todo el territorio.</p>
+        <div className="locationFacts"><span><b>01</b> MOSQUERA · CUNDINAMARCA</span><span><b>02</b> CORREDOR LOGÍSTICO</span></div>
       </div>
     </section>
   );
