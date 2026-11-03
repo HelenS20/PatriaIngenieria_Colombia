@@ -1,7 +1,7 @@
 export function LocationSection() {
   return (
     <section className="mapBlock" data-reveal>
-      <div className="locationMap" aria-label="Esquema ilustrativo de la ubicación de referencia de Dromos en Mosquera">
+      <div className="locationMap" aria-label="Esquema ilustrativo de ubicación">
         <div className="locationMapTop"><span>REFERENCIA DE UBICACIÓN</span><span>MOSQUERA · CUNDINAMARCA</span></div>
         <svg className="locationMapDrawing" viewBox="0 0 700 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <defs>
@@ -19,7 +19,7 @@ export function LocationSection() {
           <circle className="mapPlantHalo" cx="205" cy="295" r="38" />
           <circle className="mapPlantRing" cx="205" cy="295" r="25" />
           <circle className="mapPlantDot" cx="205" cy="295" r="8" />
-          <text className="mapLabel mapLabelStrong" x="170" y="250">DROMOS</text>
+          <text className="mapLabel mapLabelStrong" x="170" y="250">PATRIA</text>
           <text className="mapLabel" x="165" y="267">BALSILLAS</text>
           <text className="mapLabel" x="340" y="265">MOSQUERA</text>
           <text className="mapLabel" x="516" y="255">SABANA</text>
@@ -35,8 +35,8 @@ export function LocationSection() {
       <div className="locationCopy">
         <p className="eyebrow">Ubicación de referencia</p>
         <h2>UN PUNTO<br /><i>DE PARTIDA.</i></h2>
-        <p className="lede">Esta es la dirección pública de Dromos que usaste como inspiración. El mapa animado es ilustrativo y la dirección no corresponde a una sede confirmada de Patria. Sustitúyela al recibir la información oficial de la empresa.</p>
-        <div className="locationFacts"><span><b>01</b> BALSILLAS · MOSQUERA</span><span><b>02</b> REFERENCIA DROMOS</span></div>
+        <p className="lede">El mapa animado es ilustrativo y la dirección no corresponde a una sede confirmada de Patria. Sustitúyela al recibir la información oficial de la empresa.</p>
+        <div className="locationFacts"><span><b>01</b> BALSILLAS · MOSQUERA</span><span><b>02</b> SEDE POR CONFIRMAR</span></div>
       </div>
     </section>
   );

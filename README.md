@@ -2,7 +2,7 @@
 
 Proyecto local en Next.js 15, React 19 y TypeScript. La navegación reúne **Quiénes somos, Soluciones, Portafolio, Proyectos, Noticias, Contáctanos y Vacantes**. El catálogo permite buscar, filtrar, ordenar y paginar con parámetros en la URL. Contacto y hojas de vida usan una API de correo; WhatsApp aparece al configurar un número confirmado. El aviso de cookies guarda la preferencia y se puede reabrir desde el pie de página.
 
-El diseño combina una portada oscura con fotografía, tarjetas claras y los colores del logo de Patria. La portada muestra tres escenas que avanzan automáticamente cada 6,5 segundos y permite elegir una escena o pausar el movimiento. Al abrir el sitio se muestra la breve animación de carga con el símbolo de Patria; se omite si el dispositivo solicita movimiento reducido. El mapa ilustrativo animado incluye la dirección pública de Dromos como referencia visual, identificada claramente para no confundirla con una sede de Patria. La paleta de interfaz usa `#01557B`, `#4F565E`, `#CCD1D4`, `#000000` y el blanco del logo. La [guía de estilos](./styles/README.md) y el [muestrario](./styles/palette.svg) explican los colores y los archivos CSS.
+El diseño combina una portada oscura con fotografía, tarjetas claras y los colores del logo de Patria. La portada muestra tres escenas que avanzan automáticamente cada 6,5 segundos y permite elegir una escena o pausar el movimiento. Al abrir el sitio se muestra la breve animación de carga con el símbolo de Patria; se omite si el dispositivo solicita movimiento reducido. El mapa ilustrativo animado debe sustituirse por la ubicación oficial antes de publicar el sitio. La paleta de interfaz usa `#01557B`, `#4F565E`, `#CCD1D4`, `#000000` y el blanco del logo. La [guía de estilos](./styles/README.md) y el [muestrario](./styles/palette.svg) explican los colores y los archivos CSS.
 
 ## Iniciar
 
@@ -57,7 +57,7 @@ El aviso guarda `patria_cookie_consent` durante seis meses con `SameSite=Lax`. L
 
 ## Contenido real y datos pendientes
 
-La razón social, Bucaramanga y las actividades económicas del texto institucional se basan en el [directorio empresarial de La República vinculado a RUES](https://empresas.larepublica.co/colombia/santander/bucaramanga/patria-ingenieria-pavimentos-y-agregados-s-a-s-901978990). La descripción comercial es una propuesta editorial. No se atribuyen a Patria años de experiencia, cifras de obra, certificaciones, productos específicos, inventario ni vacantes sin soportes. Las fotos son ilustrativas. La ubicación animada de la portada muestra como referencia el [Km 3.8, Zona Industrial Balsillas, Mosquera, de Dromos](https://dromos.co/); **no es una dirección verificada de Patria**. Antes de publicar el sitio oficial, reemplaza esta dirección y el enlace al mapa en `components/home/location-section.tsx`.
+La razón social y las actividades económicas del texto institucional se basan en un directorio empresarial vinculado a RUES. La descripción comercial es una propuesta editorial. No se atribuyen a Patria años de experiencia, cifras de obra, certificaciones, productos específicos, inventario ni vacantes sin soportes. Las fotos son ilustrativas. Antes de publicar el sitio oficial, reemplaza la dirección y el enlace del mapa en `components/home/location-section.tsx` por la información aprobada por la empresa.
 
 Antes de publicar como sitio oficial, solicita y reemplaza:
 
