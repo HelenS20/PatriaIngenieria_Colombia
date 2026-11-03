@@ -27,7 +27,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .heroNetwork circle { animation: agencyPulse 3.8s ease-in-out infinite alternate; }
 .heroEdgeCopy { position: relative; z-index: 2; align-self: center; padding: clamp(80px,8vw,130px) 4vw 116px var(--page-gutter); animation: agencyRise .65s both; }
 .heroEdgeCopy .eyebrow { margin-bottom: 28px; color: #ccd1d4; font-size: 11px; letter-spacing: 1.6px; }
-.heroEdgeCopy h1 { max-width: 790px; margin: 0; font: 650 clamp(55px,6vw,102px)/.98 'Space Grotesk',sans-serif; letter-spacing: -.075em; text-wrap: balance; }
+.heroEdgeCopy h1 { max-width: 790px; margin: 0; font: 650 clamp(55px,6vw,102px)/.98 var(--font-jakarta),sans-serif; letter-spacing: -.075em; text-wrap: balance; }
 .heroEdgeCopy h1 i { color: #ccd1d4; font-style: normal; }
 .heroEdgeLead { max-width: 540px; margin: 30px 0 34px; color: #ccd1d4; font-size: clamp(16px,1.4vw,19px); line-height: 1.65; }
 .heroEdgeActions { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; }
@@ -40,15 +40,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .heroEdgeVisual img { object-fit: cover; }
 .heroEdgeVisual::after { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg,rgba(0,0,0,.35),transparent 35%),linear-gradient(0deg,rgba(0,0,0,.7),transparent 48%); }
 .heroEdgeVisualTag { position: absolute; z-index: 1; left: clamp(24px,4vw,70px); right: 26px; bottom: 62px; display: grid; gap: 5px; color: #fff; }
-.heroEdgeVisualTag span { color: #ccd1d4; font: 700 12px 'DM Mono',monospace; }
-.heroEdgeVisualTag strong { font: 600 clamp(28px,3.2vw,45px)/1 'Space Grotesk',sans-serif; }
-.heroEdgeVisualTag small { font: 700 9px 'DM Mono',monospace; letter-spacing: 1px; opacity: .9; }
+.heroEdgeVisualTag span { color: #ccd1d4; font: 700 12px var(--font-dm-mono),monospace; }
+.heroEdgeVisualTag strong { font: 600 clamp(28px,3.2vw,45px)/1 var(--font-jakarta),sans-serif; }
+.heroEdgeVisualTag small { font: 700 9px var(--font-dm-mono),monospace; letter-spacing: 1px; opacity: .9; }
 .heroEdgeControls { position: absolute; z-index: 3; left: var(--page-gutter); bottom: 26px; display: flex; align-items: center; gap: 20px; width: min(470px,calc(100% - 2 * var(--page-gutter))); color: #fff; }
 .heroEdgeDots { display: flex; align-items: center; gap: 7px; }
 .heroEdgeDots button { display: grid; place-items: center; width: 30px; height: 30px; padding: 0; border: 0; background: transparent; cursor: pointer; }
 .heroEdgeDots button span { width: 8px; height: 8px; border: 1px solid #ccd1d4; border-radius: 50%; background: transparent; transition: width .2s ease,background .2s ease; }
 .heroEdgeDots button[aria-current="true"] span { width: 24px; border-radius: 8px; background: #ccd1d4; }
-.heroEdgeCount { font: 700 11px 'DM Mono',monospace; white-space: nowrap; }
+.heroEdgeCount { font: 700 11px var(--font-dm-mono),monospace; white-space: nowrap; }
 .heroEdgePause { width: 28px; height: 28px; border: 1px solid rgba(255,255,255,.44); border-radius: 50%; background: transparent; color: #fff; font-size: 11px; cursor: pointer; }
 .heroEdgeProgress { flex: 1; height: 2px; overflow: hidden; background: rgba(255,255,255,.3); }
 .heroEdgeProgress span { display: block; width: 100%; height: 100%; background: #ccd1d4; transform-origin: left; animation: agencyProgress 6.5s linear both; }
@@ -71,7 +71,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .servicesSection .serviceGrid { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; margin-top: 52px; border: 0; }
 .servicesSection .service { display: flex; flex-direction: column; align-items: flex-start; min-height: 280px; gap: 0; padding: 28px !important; border: 1px solid #ccd1d4; border-radius: var(--agency-radius); background: #fff; box-shadow: 0 12px 32px rgba(16,56,114,.06); transition: transform .3s ease,box-shadow .3s ease,border-color .3s ease; }
 .servicesSection .service:hover { transform: translateY(-8px); border-color: #ccd1d4; background: #fff; box-shadow: 0 22px 40px rgba(16,56,114,.12); }
-.servicesSection .service > b { color: #4f565e; font: 700 10px 'DM Mono',monospace; }
+.servicesSection .service > b { color: #4f565e; font: 700 10px var(--font-dm-mono),monospace; }
 .servicesSection .serviceIcon { display: grid; place-items: center; width: 62px; height: 62px; margin: 20px 0 27px; border: 1px solid #ccd1d4; border-radius: 14px; background: #ccd1d4; color: #01557b; font-size: 28px; }
 .servicesSection .service > div { min-width: 0; }
 .servicesSection .service h3 { margin: 0 0 11px; color: var(--agency-ink); font-size: clamp(19px,1.8vw,26px); line-height: 1.1; }
@@ -143,7 +143,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .contactImage span { color: #ccd1d4; }
 .cookiePanel { border-color: #ccd1d4; border-radius: 14px; }
 .cookieActions button { border-radius: 7px; }
-footer { background: #01557b; }
 
 @keyframes agencyRise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes agencyImageIn { from { opacity: .45; transform: scale(1.035); } to { opacity: 1; transform: scale(1); } }

@@ -115,7 +115,7 @@ export default async function PortfolioDetailPage({
           </div>
 
           <Link
-            className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold mt-12 hover:text-brand-blue-deep transition-colors"
+            className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold mt-12 hover:text-brand-black transition-colors"
             href={returnHref}
           >
             <ArrowLeft className="w-4 h-4" />
@@ -138,7 +138,7 @@ export default async function PortfolioDetailPage({
               </div>
               <Link
                 href={returnHref}
-                className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold hover:text-brand-blue-deep transition-colors"
+                className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold hover:text-brand-black transition-colors"
               >
                 Ver todas las líneas
                 <ArrowRight className="w-4 h-4" />
@@ -162,13 +162,13 @@ export default async function PortfolioDetailPage({
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <span className="text-[10px] font-mono text-brand-blue-light mb-2 block">
+                    <span className="text-[10px] font-mono text-brand-silver mb-2 block">
                       {other.categoryLabel}
                     </span>
                     <h3 className="text-[20px] font-display font-semibold text-white mb-2">
                       {other.title}
                     </h3>
-                    <span className="inline-flex items-center gap-2 text-brand-blue-light text-[12px] font-bold">
+                    <span className="inline-flex items-center gap-2 text-brand-silver text-[12px] font-bold">
                       Ver detalles
                       <ArrowRight className="w-4 h-4" />
                     </span>

@@ -65,7 +65,7 @@
 .certCard p,
 .certCard small {
   margin: 0;
-  font: 10px "DM Mono", monospace;
+  font: 10px var(--font-dm-mono), monospace;
   letter-spacing: .8px;
 }
 
@@ -89,7 +89,7 @@
 .certCard h3 {
   max-width: 190px;
   margin: 9px 0 0;
-  font: 700 24px/.96 "Space Grotesk", sans-serif;
+  font: 700 24px/.96 var(--font-jakarta), sans-serif;
   letter-spacing: -.055em;
 }
 
@@ -113,7 +113,7 @@
 .certCarouselMeta p {
   margin: 0;
   color: #657069;
-  font: 10px "DM Mono", monospace;
+  font: 10px var(--font-dm-mono), monospace;
   letter-spacing: .65px;
 }
 
@@ -134,7 +134,7 @@
   padding: 0 0 5px;
   background: transparent;
   color: #111;
-  font: 700 10px "DM Mono", monospace;
+  font: 700 10px var(--font-dm-mono), monospace;
   letter-spacing: .8px;
   cursor: pointer;
   transition: color .2s ease, border-color .2s ease;

@@ -27,18 +27,18 @@ export default async function PortfolioPage({ searchParams }: { searchParams: Pr
       <section className="min-h-[430px] bg-[#102a38]">
         <div className="px-page-gutter py-[100px_0] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-[10px] font-bold tracking-[1.5px] uppercase text-brand-blue-light font-mono">
+            <p className="text-[10px] font-bold tracking-[1.5px] uppercase text-brand-silver font-mono">
               PATRIA INGENIERÍA / PORTAFOLIO
             </p>
             <h1 className="text-[clamp(50px,5.9vw,90px)] font-display font-semibold leading-[0.98] tracking-[-0.08em] text-white">
               Soluciones para{" "}
-              <span className="text-brand-blue-light italic">seguir avanzando.</span>
+              <span className="text-brand-silver italic">seguir avanzando.</span>
             </h1>
             <p className="text-[16px] leading-[1.75] text-white/80 max-w-xl">
               Explora materiales, infraestructura vial y equipos en un catálogo pensado para iniciar una conversación sobre tu proyecto.
             </p>
             <a
-              className="inline-flex items-center gap-2 text-brand-blue-light text-[12px] font-bold hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-brand-silver text-[12px] font-bold hover:text-white transition-colors"
               href="#explorar"
             >
               Explorar líneas
@@ -143,7 +143,7 @@ export default async function PortfolioPage({ searchParams }: { searchParams: Pr
               {hasFilters && (
                 <Link
                   href="/portafolio"
-                  className="flex items-center gap-2 text-brand-blue hover:text-brand-blue-deep transition-colors"
+                  className="flex items-center gap-2 text-brand-blue hover:text-brand-black transition-colors"
                 >
                   Limpiar filtros
                   <X className="w-4 h-4" />
@@ -195,7 +195,7 @@ export default async function PortfolioPage({ searchParams }: { searchParams: Pr
                       <span className="text-[12px] text-brand-graphite">{item.applications[0]}</span>
                       <Link
                         href={`/portafolio/${item.slug}?volver=${encodeURIComponent(portfolioHref(query))}`}
-                        className="text-brand-blue text-[12px] font-bold flex items-center gap-1 hover:text-brand-blue-deep transition-colors"
+                        className="text-brand-blue text-[12px] font-bold flex items-center gap-1 hover:text-brand-black transition-colors"
                         aria-label={`Ver detalles de ${item.title}`}
                       >
                         Ver detalle
@@ -217,7 +217,7 @@ export default async function PortfolioPage({ searchParams }: { searchParams: Pr
               </p>
               <Link
                 href="/portafolio"
-                className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold hover:text-brand-blue-deep transition-colors"
+                className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold hover:text-brand-black transition-colors"
               >
                 Ver todas las líneas
                 <ArrowRight className="w-4 h-4" />
@@ -256,7 +256,7 @@ export default async function PortfolioPage({ searchParams }: { searchParams: Pr
       <section className="py-[clamp(76px,8vw,118px)] bg-[#102a38]">
         <div className="px-page-gutter flex flex-col lg:flex-row items-center justify-between gap-8">
           <div>
-            <p className="text-[10px] font-bold tracking-[1.5px] uppercase text-brand-blue-light font-mono mb-4">
+            <p className="text-[10px] font-bold tracking-[1.5px] uppercase text-brand-silver font-mono mb-4">
               HABLEMOS DE TU PROYECTO
             </p>
             <h2 className="text-[clamp(43px,4.6vw,70px)] font-display font-semibold leading-[1.01] tracking-[-0.062em] text-white mb-4">
@@ -267,7 +267,7 @@ export default async function PortfolioPage({ searchParams }: { searchParams: Pr
             </p>
           </div>
           <Link
-            className="inline-flex items-center gap-5 min-h-[48px] px-5 py-3 border border-brand-blue-light bg-brand-blue-light text-brand-black font-bold text-[12px] rounded-sm hover:bg-white hover:-translate-y-0.5 transition-all duration-300"
+            className="inline-flex items-center gap-5 min-h-[48px] px-5 py-3 border border-brand-silver bg-brand-silver text-brand-black font-bold text-[12px] rounded-sm hover:bg-white hover:-translate-y-0.5 transition-all duration-300"
             href="/contacto"
           >
             Escríbenos

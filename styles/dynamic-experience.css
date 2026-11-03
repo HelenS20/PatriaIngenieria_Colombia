@@ -86,7 +86,7 @@
 .carouselControls p {
   margin: 0;
   color: #6d756f;
-  font: 10px "DM Mono", monospace;
+  font: 10px var(--font-dm-mono), monospace;
   letter-spacing: 1px;
 }
 

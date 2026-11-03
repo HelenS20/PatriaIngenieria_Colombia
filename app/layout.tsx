@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { ExperienceShell } from "@/components/ui/experience-shell";
 import { CookieConsent } from "@/components/ui/cookie-consent";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
-import { Inter, DM_Mono, Space_Grotesk } from "next/font/google";
+import { Inter, DM_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import "../styles/tokens.css";
 import "./interactive.css";
@@ -41,10 +41,10 @@ const dmMono = DM_Mono({
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-jakarta",
   display: "swap",
 });
 
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${dmMono.variable} ${spaceGrotesk.variable}`}>
+    <html lang="es" className={`${inter.variable} ${dmMono.variable} ${plusJakarta.variable}`}>
       <body className="font-sans antialiased">
         <ExperienceShell>
           <SiteHeader />

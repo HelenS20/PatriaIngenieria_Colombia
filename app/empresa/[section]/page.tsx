@@ -41,7 +41,7 @@ function CompanyContent({ title, intro, body, icon: Icon }: { title: string; int
           Si necesitas información ahora,{" "}
           <Link
             href="/contacto"
-            className="text-brand-blue hover:text-brand-blue-deep underline underline-offset-2 font-semibold"
+            className="text-brand-blue hover:text-brand-black underline underline-offset-2 font-semibold"
           >
             escríbenos desde el formulario de contacto
           </Link>
@@ -62,7 +62,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ sectio
     <section className="py-[clamp(76px,8vw,118px)] bg-[#f5f8f9]">
       <div className="px-page-gutter">
         <Link
-          className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold mb-8 hover:text-brand-blue-deep transition-colors"
+          className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold mb-8 hover:text-brand-black transition-colors"
           href="/quienes-somos"
         >
           <ArrowLeft className="w-4 h-4" />

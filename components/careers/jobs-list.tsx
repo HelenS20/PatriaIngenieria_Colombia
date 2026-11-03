@@ -49,7 +49,7 @@ export function JobsList({ jobs }: { jobs: Job[] }) {
             </div>
             <a
               href="#postulacion"
-              className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold hover:text-brand-blue-deep transition-colors mt-4 md:mt-0"
+              className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold hover:text-brand-black transition-colors mt-4 md:mt-0"
             >
               POSTULARME
               <ArrowRight className="w-4 h-4" />

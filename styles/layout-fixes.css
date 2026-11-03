@@ -142,14 +142,14 @@ body {
     border: 0;
     background: transparent;
     color: #fff;
-    font: 700 10px "DM Mono", monospace;
+    font: 700 10px var(--font-dm-mono), monospace;
     letter-spacing: 1px;
     cursor: pointer;
   }
 
   .mobileMenuToggle b {
     color: var(--lime);
-    font: 400 18px/1 "Space Grotesk", sans-serif;
+    font: 400 18px/1 var(--font-jakarta), sans-serif;
   }
 
   .mobileDrawer {
@@ -177,7 +177,7 @@ body {
 
   .mobileDrawer a {
     color: #fff;
-    font: 600 12px "Space Grotesk", sans-serif;
+    font: 600 12px var(--font-jakarta), sans-serif;
   }
 
   .mobileDrawer a:active,
@@ -193,7 +193,7 @@ body {
   .mobileDrawerCompany p {
     margin: 0 0 2px;
     color: var(--lime);
-    font: 10px "DM Mono", monospace;
+    font: 10px var(--font-dm-mono), monospace;
     letter-spacing: 1px;
     text-transform: uppercase;
   }

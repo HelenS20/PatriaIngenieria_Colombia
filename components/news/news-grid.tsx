@@ -42,7 +42,7 @@ export function NewsGrid({ items }: { items: NewsItem[] }) {
             </p>
             <Link
               href={`/noticias/${item.id}`}
-              className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold hover:text-brand-blue-deep transition-colors"
+              className="inline-flex items-center gap-2 text-brand-blue text-[12px] font-bold hover:text-brand-black transition-colors"
             >
               VER BORRADOR
               <ArrowRight className="w-4 h-4" />

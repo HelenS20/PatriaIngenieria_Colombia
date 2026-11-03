@@ -2,17 +2,21 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { CookieSettingsButton } from "@/components/ui/cookie-consent";
+import { Container } from "@/components/ui/container";
+
+const linkClass = "block text-sm text-brand-silver transition-colors hover:text-white";
+const groupTitleClass = "mb-4 text-xs font-bold uppercase tracking-widest text-brand-silver/70";
 
 export function SiteFooter() {
   const whatsAppUrl = getWhatsAppUrl("Hola, quiero conocer los servicios de Patria Ingeniería.");
 
   return (
-    <footer className="bg-zinc-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-brand-black py-16 text-white">
+      <Container>
+        <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <Link
-              className="inline-flex items-center w-[200px] h-12 mb-6"
+              className="mb-6 inline-flex h-12 w-[200px] items-center"
               href="/"
               aria-label={`${siteConfig.name} - inicio`}
             >
@@ -22,58 +26,35 @@ export function SiteFooter() {
                 className="h-full w-auto object-contain"
               />
             </Link>
-            <p className="text-zinc-400 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-brand-silver">
               Patria Ingeniería Pavimentos y Agregados S.A.S. — ingeniería e infraestructura.
             </p>
           </div>
 
           <div>
-            <p className="text-xs font-bold tracking-widest uppercase text-zinc-500 mb-4">
-              Explora
-            </p>
+            <p className={groupTitleClass}>Explora</p>
             <div className="space-y-3">
-              <Link
-                href="/quienes-somos"
-                className="block text-zinc-400 text-sm hover:text-white transition-colors"
-              >
+              <Link href="/quienes-somos" className={linkClass}>
                 Quiénes somos
               </Link>
-              <Link
-                href="/portafolio"
-                className="block text-zinc-400 text-sm hover:text-white transition-colors"
-              >
+              <Link href="/portafolio" className={linkClass}>
                 Portafolio
               </Link>
-              <Link
-                href="/vacantes"
-                className="block text-zinc-400 text-sm hover:text-white transition-colors"
-              >
+              <Link href="/vacantes" className={linkClass}>
                 Vacantes
               </Link>
             </div>
           </div>
 
           <div>
-            <p className="text-xs font-bold tracking-widest uppercase text-zinc-500 mb-4">
-              Contacto
-            </p>
+            <p className={groupTitleClass}>Contacto</p>
             <div className="space-y-3">
-              <span className="block text-zinc-400 text-sm">
-                {siteConfig.city}
-              </span>
-              <Link
-                href="/contacto"
-                className="block text-zinc-400 text-sm hover:text-white transition-colors"
-              >
+              <span className="block text-sm text-brand-silver">{siteConfig.city}</span>
+              <Link href="/contacto" className={linkClass}>
                 Escríbenos
               </Link>
               {whatsAppUrl && (
-                <a
-                  href={whatsAppUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-zinc-400 text-sm hover:text-white transition-colors"
-                >
+                <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
                   WhatsApp →
                 </a>
               )}
@@ -81,20 +62,12 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="text-xs font-bold tracking-widest uppercase text-zinc-500 mb-4">
-              Legal
-            </p>
+            <p className={groupTitleClass}>Legal</p>
             <div className="space-y-3">
-              <Link
-                href="/empresa/tratamiento-datos"
-                className="block text-zinc-400 text-sm hover:text-white transition-colors"
-              >
+              <Link href="/empresa/tratamiento-datos" className={linkClass}>
                 Tratamiento de datos
               </Link>
-              <Link
-                href="/politica-cookies"
-                className="block text-zinc-400 text-sm hover:text-white transition-colors"
-              >
+              <Link href="/politica-cookies" className={linkClass}>
                 Política de cookies
               </Link>
               <div className="pt-2">
@@ -104,12 +77,12 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-zinc-800">
-          <small className="text-zinc-500 text-sm">
+        <div className="border-t border-white/15 pt-8">
+          <small className="text-sm text-brand-silver/70">
             © {new Date().getFullYear()} {siteConfig.legalName}. Todos los derechos reservados.
           </small>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

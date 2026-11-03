@@ -8,34 +8,26 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Paleta oficial de Patria (ver styles/palette.json). No añadir tonos fuera de esta lista.
       colors: {
         brand: {
           blue: "#01557b",
-          "blue-deep": "#000000",
-          "blue-light": "#ccd1d4",
           graphite: "#4f565e",
           silver: "#ccd1d4",
           black: "#000000",
           white: "#ffffff",
-          canvas: "#ffffff",
-          border: "#ccd1d4",
-          error: "#000000",
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "Manrope", "Arial", "sans-serif"],
-        mono: ["var(--font-dm-mono)", "DM Mono", "monospace"],
-        display: ["var(--font-space-grotesk)", "Space Grotesk", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "Arial", "sans-serif"],
+        display: ["var(--font-jakarta)", "var(--font-inter)", "system-ui", "sans-serif"],
+        mono: ["var(--font-dm-mono)", "ui-monospace", "monospace"],
       },
       fontSize: {
-        "hero-title": "clamp(56px, 7vw, 112px)",
-        "section-title": "clamp(43px, 4.7vw, 72px)",
+        "section-title": ["clamp(2.25rem, 4vw, 3.5rem)", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
       },
       spacing: {
         "page-gutter": "clamp(22px, 5vw, 84px)",
-      },
-      backdropBlur: {
-        "14": "14px",
       },
     },
   },

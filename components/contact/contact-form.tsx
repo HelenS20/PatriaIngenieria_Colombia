@@ -120,7 +120,7 @@ export function ContactForm({ initialSubject = "" }: { initialSubject?: string }
             <Link
               href="/empresa/tratamiento-datos"
               target="_blank"
-              className="text-brand-blue hover:text-brand-blue-deep underline underline-offset-2"
+              className="text-brand-blue hover:text-brand-black underline underline-offset-2"
             >
               tratamiento de datos
             </Link>{" "}

@@ -15,13 +15,13 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
       <section className="min-h-[650px] bg-[#102a38]">
         <div className="px-page-gutter py-[100px_0] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <p className="text-[10px] font-bold tracking-[1.5px] uppercase text-brand-blue-light font-mono">
+            <p className="text-[10px] font-bold tracking-[1.5px] uppercase text-brand-silver font-mono">
               Inicia tu proyecto
             </p>
             <h1 className="text-[clamp(50px,5.9vw,90px)] font-display font-semibold leading-[0.98] tracking-[-0.08em] text-white">
               HABLEMOS
               <br />
-              <span className="text-brand-blue-light italic">DE TU IDEA.</span>
+              <span className="text-brand-silver italic">DE TU IDEA.</span>
             </h1>
             <p className="text-[16px] leading-[1.75] text-white/80 max-w-xl">
               Cuéntanos qué necesitas en materiales, equipos u obra civil. El formulario nos permite organizar tu solicitud y responderte al correo indicado.
@@ -36,7 +36,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
               </a>
               {whatsAppUrl && (
                 <a
-                  className="inline-flex items-center gap-5 min-h-[48px] px-5 py-3 border border-brand-blue-light text-brand-blue-light font-bold text-[12px] rounded-sm hover:bg-brand-blue-light hover:text-brand-black transition-all duration-300"
+                  className="inline-flex items-center gap-5 min-h-[48px] px-5 py-3 border border-brand-silver text-brand-silver font-bold text-[12px] rounded-sm hover:bg-brand-silver hover:text-brand-black transition-all duration-300"
                   href={whatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -47,9 +47,9 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
               )}
             </div>
           </div>
-          <div className="relative h-[400px] lg:h-[500px] rounded-sm overflow-hidden bg-gradient-to-br from-brand-blue to-brand-blue-deep flex items-center justify-center">
+          <div className="relative h-[400px] lg:h-[500px] rounded-sm overflow-hidden bg-gradient-to-br from-brand-blue to-brand-black flex items-center justify-center">
             <div className="text-center space-y-4">
-              <span className="text-[80px] font-display font-bold text-brand-blue-light">P</span>
+              <span className="text-[80px] font-display font-bold text-brand-silver">P</span>
               <p className="text-[24px] font-display font-semibold text-white">
                 INGENIERÍA
                 <br />
@@ -84,7 +84,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
                     </small>
                     <a
                       href={`mailto:${siteConfig.email}`}
-                      className="text-[14px] text-brand-blue hover:text-brand-blue-deep transition-colors"
+                      className="text-[14px] text-brand-blue hover:text-brand-black transition-colors"
                     >
                       {siteConfig.email}
                     </a>
@@ -109,7 +109,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
                     </small>
                     <Link
                       href="/vacantes"
-                      className="text-[14px] text-brand-blue hover:text-brand-blue-deep transition-colors inline-flex items-center gap-1"
+                      className="text-[14px] text-brand-blue hover:text-brand-black transition-colors inline-flex items-center gap-1"
                     >
                       Envía tu hoja de vida
                       <ArrowRight className="w-4 h-4" />
@@ -128,7 +128,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
                         href={whatsAppUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[14px] text-brand-blue hover:text-brand-blue-deep transition-colors inline-flex items-center gap-1"
+                        className="text-[14px] text-brand-blue hover:text-brand-black transition-colors inline-flex items-center gap-1"
                       >
                         Abrir WhatsApp
                         <ArrowRight className="w-4 h-4" />
@@ -140,8 +140,8 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
 
               <div className="p-6 bg-[#152e38] rounded-sm">
                 <div className="flex items-center gap-3 mb-4">
-                  <MapPin className="w-5 h-5 text-brand-blue-light" />
-                  <span className="text-[12px] font-bold text-brand-blue-light">UBICACIÓN POR CONFIRMAR</span>
+                  <MapPin className="w-5 h-5 text-brand-silver" />
+                  <span className="text-[12px] font-bold text-brand-silver">UBICACIÓN POR CONFIRMAR</span>
                 </div>
                 <p className="text-[13px] text-white/70">
                   La dirección física se actualizará cuando Patria confirme su sede oficial.

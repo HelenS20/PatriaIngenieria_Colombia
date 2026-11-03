@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
+import { Container } from "@/components/ui/container";
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -10,10 +11,10 @@ export function SiteHeader() {
   const closeMenu = () => setMobileOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 h-16 border-b border-zinc-200 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+    <header className="sticky top-0 z-50 h-16 border-b border-brand-silver bg-white">
+      <Container className="flex h-full items-center justify-between">
         <Link
-          className="flex items-center w-[160px] h-12"
+          className="flex h-12 w-[160px] items-center"
           href="/"
           onClick={closeMenu}
           aria-label={`${siteConfig.name} - inicio`}
@@ -25,13 +26,15 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Navegación principal">
           {siteConfig.navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={`text-sm font-medium transition-colors ${
-                pathname === item.href ? "text-zinc-900" : "text-zinc-600 hover:text-zinc-900"
+                pathname === item.href
+                  ? "text-brand-blue"
+                  : "text-brand-graphite hover:text-brand-blue"
               }`}
               aria-current={pathname === item.href ? "page" : undefined}
             >
@@ -42,14 +45,14 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-4">
           <Link
-            className="hidden md:inline-flex items-center px-4 py-2 bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors"
+            className="hidden items-center rounded-sm bg-brand-blue px-4 py-2 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-[#004769] md:inline-flex"
             href="/vacantes"
           >
             VACANTES
           </Link>
 
           <button
-            className="md:hidden flex items-center gap-2 text-zinc-900 text-sm"
+            className="flex items-center gap-2 text-sm font-medium text-brand-black md:hidden"
             type="button"
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"
@@ -61,18 +64,18 @@ export function SiteHeader() {
 
         {mobileOpen && (
           <nav
-            className="fixed inset-0 top-16 z-40 bg-white border-t border-zinc-200 md:hidden"
+            className="fixed inset-0 top-16 z-40 border-t border-brand-silver bg-white md:hidden"
             id="mobile-navigation"
             aria-label="Navegación móvil"
           >
-            <div className="flex flex-col p-6 space-y-0">
+            <div className="flex flex-col p-6">
               {siteConfig.navigation.map((item) => (
                 <Link
                   key={item.href}
                   onClick={closeMenu}
                   href={item.href}
-                  className={`py-4 border-b border-zinc-100 text-base font-medium ${
-                    pathname === item.href ? "text-zinc-900" : "text-zinc-600"
+                  className={`border-b border-brand-silver py-4 text-base font-medium ${
+                    pathname === item.href ? "text-brand-blue" : "text-brand-graphite"
                   }`}
                 >
                   {item.label}
@@ -80,7 +83,7 @@ export function SiteHeader() {
               ))}
               <Link
                 onClick={closeMenu}
-                className="py-4 text-zinc-900 font-medium"
+                className="py-4 font-semibold text-brand-blue"
                 href="/vacantes"
               >
                 Vacantes
@@ -88,7 +91,7 @@ export function SiteHeader() {
             </div>
           </nav>
         )}
-      </div>
+      </Container>
     </header>
   );
 }

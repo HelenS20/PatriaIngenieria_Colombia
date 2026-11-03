@@ -8,13 +8,13 @@ export default function JobsPage() {
     <>
       <section className="min-h-[560px] bg-[#102a38]">
         <div className="px-page-gutter py-[100px_0]">
-          <p className="text-[10px] font-bold tracking-[1.5px] uppercase text-brand-blue-light font-mono mb-4">
+          <p className="text-[10px] font-bold tracking-[1.5px] uppercase text-brand-silver font-mono mb-4">
             Talento / Patria Ingeniería
           </p>
           <h1 className="text-[clamp(50px,5.9vw,90px)] font-display font-semibold leading-[0.98] tracking-[-0.08em] text-white mb-6">
             CONSTRUYAMOS
             <br />
-            <span className="text-brand-blue-light italic">FUTURO JUNTOS.</span>
+            <span className="text-brand-silver italic">FUTURO JUNTOS.</span>
           </h1>
           <p className="text-[16px] leading-[1.75] text-white/80 max-w-xl">
             Explora las convocatorias publicadas o envía tu hoja de vida para futuras oportunidades.
