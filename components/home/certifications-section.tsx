@@ -17,15 +17,15 @@ export function CertificationsSection() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <p className="text-xs font-bold tracking-widest uppercase text-zinc-500 mb-4">
+          <p className="text-xs font-bold tracking-widest uppercase text-brand-graphite mb-4">
             Ámbitos de actividad
           </p>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 leading-tight mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-brand-black leading-tight mb-4">
             CAPACIDADES
             <br />
-            <span className="text-zinc-600">Y SERVICIOS.</span>
+            <span className="text-brand-blue">Y SERVICIOS.</span>
           </h2>
-          <p className="max-w-md text-base text-zinc-600 leading-relaxed">
+          <p className="max-w-md text-base text-brand-graphite leading-relaxed">
             Un recorrido por las actividades registradas de Patria. El alcance de cada línea debe validarse antes de publicar fichas comerciales.
           </p>
         </div>
@@ -34,31 +34,31 @@ export function CertificationsSection() {
           {certifications.map((item, index) => (
             <article
               key={item.code}
-              className="p-6 bg-zinc-50 border border-zinc-200 hover:border-zinc-300 transition-colors"
+              className="p-6 bg-brand-silver/15 border border-brand-silver hover:border-brand-blue transition-colors"
             >
               <div className="mb-4">
-                <span className="text-sm font-mono text-zinc-500">
+                <span className="text-sm font-mono text-brand-graphite">
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
               <div className="space-y-2">
-                <p className="text-xs font-mono text-zinc-400">{item.code}</p>
-                <h3 className="text-lg font-bold text-zinc-900">{item.title}</h3>
+                <p className="text-xs font-mono text-brand-graphite">{item.code}</p>
+                <h3 className="text-lg font-bold text-brand-black">{item.title}</h3>
               </div>
-              <small className="block mt-4 text-sm text-zinc-600">{item.detail}</small>
+              <small className="block mt-4 text-sm text-brand-graphite">{item.detail}</small>
             </article>
           ))}
         </div>
 
-        <div className="mt-8 flex items-center justify-between text-sm text-zinc-600">
+        <div className="mt-8 flex items-center justify-between text-sm text-brand-graphite">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-zinc-900 rounded-full" />
+            <span className="w-2 h-2 bg-brand-blue rounded-full" />
             <span>CARRUSEL AUTOMÁTICO · {certifications.length} ÁMBITOS</span>
           </div>
           <button
             type="button"
             onClick={() => setPaused((value) => !value)}
-            className="hover:text-zinc-900 transition-colors"
+            className="hover:text-brand-blue transition-colors"
           >
             {paused ? "▶ REANUDAR" : "❚❚ PAUSAR"}
           </button>

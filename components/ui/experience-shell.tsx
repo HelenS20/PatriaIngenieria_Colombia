@@ -41,5 +41,28 @@ export function ExperienceShell({ children }: { children: ReactNode }) {
     };
   }, [pathname]);
 
-  return <><div className="readingProgress" aria-hidden="true" /><div className={`preloader ${loading ? "" : "preloaderOut"}`} aria-hidden="true"><div><span><Image src={brandIcon} alt="" priority /></span><b>PATRIA INGENIERÍA</b><i /></div></div>{children}</>;
+  return (
+    <>
+      <div
+        className="fixed left-0 top-0 z-[100] h-[3px] bg-brand-blue transition-[width] duration-100 ease-linear"
+        style={{ width: "var(--scroll, 0%)" }}
+        aria-hidden="true"
+      />
+      <div
+        className={`fixed inset-0 z-[9999] grid place-items-center bg-brand-black transition-[opacity,visibility] duration-500 ${
+          loading ? "visible opacity-100" : "invisible opacity-0"
+        }`}
+        aria-hidden="true"
+      >
+        <div className="flex flex-col items-center gap-5 text-center">
+          <span className="grid h-[60px] w-[60px] place-items-center rounded-full bg-white">
+            <Image src={brandIcon} alt="" priority className="h-9 w-9 object-contain" />
+          </span>
+          <b className="font-mono text-[10px] font-bold tracking-[1.4px] text-white">PATRIA INGENIERÍA</b>
+          <i className="block h-0.5 w-[180px] animate-pulse bg-brand-silver" />
+        </div>
+      </div>
+      {children}
+    </>
+  );
 }

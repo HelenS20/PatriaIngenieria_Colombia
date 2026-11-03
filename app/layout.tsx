@@ -7,26 +7,8 @@ import { ExperienceShell } from "@/components/ui/experience-shell";
 import { CookieConsent } from "@/components/ui/cookie-consent";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { Inter, DM_Mono, Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
 import "../styles/tokens.css";
-import "./interactive.css";
-import "./contact.css";
-import "../styles/responsive.css";
-import "./assets.css";
-import "../styles/layout-fixes.css";
-import "../styles/dynamic-experience.css";
-import "../styles/certification-marquee.css";
-import "../styles/location-motion.css";
-import "../styles/hero-ticker.css";
-import "../styles/section-polish.css";
-import "../styles/final-polish.css";
-import "../styles/certification-finish.css";
-import "../styles/patria-brand.css";
-import "../styles/patria-refresh.css";
-import "../styles/modern-minimal.css";
-import "../styles/portfolio-v2.css";
-import "../styles/agency-direction.css";
-import "../styles/company-info.css";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],

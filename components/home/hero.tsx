@@ -62,40 +62,40 @@ export function Hero() {
   const slide = slides[active];
 
   return (
-    <section className="relative min-h-[700px] flex items-center bg-zinc-900" aria-label="Presentación de Patria Ingeniería">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="relative flex min-h-[700px] items-center bg-brand-black" aria-label="Presentación de Patria Ingeniería">
+      <div className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="space-y-8">
-            <p className="text-xs font-bold tracking-widest uppercase text-zinc-400">
+            <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-brand-silver">
               {slide.eyebrow}
             </p>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+            <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
               {slide.first}
               <br />
-              <span className="text-zinc-300">{slide.accent}</span>
+              <span className="text-brand-silver">{slide.accent}</span>
             </h1>
-            <p className="text-lg text-zinc-400 max-w-xl leading-relaxed">
+            <p className="max-w-xl text-lg leading-relaxed text-brand-silver">
               {slide.description}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href={slide.href}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-zinc-900 font-semibold text-sm hover:bg-zinc-100 transition-colors border border-zinc-200"
+                className="inline-flex items-center gap-2 rounded-sm bg-white px-6 py-3 text-sm font-semibold text-brand-black transition-colors hover:bg-brand-silver"
               >
                 Explorar portafolio
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/contacto"
-                className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold text-sm hover:text-zinc-300 transition-colors border border-zinc-700"
+                className="inline-flex items-center gap-2 rounded-sm border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/5"
               >
                 Hablemos de tu proyecto
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
 
-          <div className="relative h-[400px] lg:h-[500px] bg-zinc-800 border border-zinc-700">
+          <div className="relative h-[400px] overflow-hidden rounded-sm border border-white/15 bg-brand-graphite lg:h-[500px]">
             <Image
               src={slide.image}
               alt={slide.alt}
@@ -104,17 +104,17 @@ export function Hero() {
               sizes="(max-width: 850px) 100vw, 48vw"
               className="object-cover"
             />
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-zinc-900/90 border-t border-zinc-700">
-              <div className="flex justify-between items-center text-zinc-400 text-xs">
+            <div className="absolute bottom-0 left-0 right-0 border-t border-white/15 bg-black/80 p-4">
+              <div className="flex items-center justify-between font-mono text-[11px] text-brand-silver">
                 <span>0{active + 1} / 0{slides.length}</span>
-                <span className="text-white font-medium">{slide.category}</span>
+                <span className="font-medium text-white">{slide.category}</span>
                 <span>IMAGEN ILUSTRATIVA</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-zinc-800">
+        <div className="mt-12 border-t border-white/15 pt-8">
           <div className="flex items-center justify-between gap-6">
             <div className="flex items-center gap-3">
               {slides.map((item, index) => (
@@ -124,13 +124,13 @@ export function Hero() {
                   aria-label={`Mostrar ${item.category}`}
                   aria-current={active === index ? "true" : undefined}
                   onClick={() => setActive(index)}
-                  className={`w-12 h-1 rounded-sm transition-colors ${
-                    active === index ? "bg-white" : "bg-zinc-700 hover:bg-zinc-600"
+                  className={`h-1 w-12 rounded-sm transition-colors ${
+                    active === index ? "bg-white" : "bg-white/30 hover:bg-white/50"
                   }`}
                 />
               ))}
             </div>
-            <span className="text-zinc-400 text-xs">
+            <span className="font-mono text-[11px] text-brand-silver">
               0{active + 1} / 0{slides.length}
             </span>
             <button
@@ -138,7 +138,7 @@ export function Hero() {
               aria-label={paused ? "Reanudar carrusel" : "Pausar carrusel"}
               aria-pressed={paused}
               onClick={() => setPaused((value) => !value)}
-              className="text-zinc-400 text-xs hover:text-white transition-colors"
+              className="font-mono text-[11px] text-brand-silver transition-colors hover:text-white"
             >
               {paused ? "▶ REANUDAR" : "❚❚ PAUSAR"}
             </button>
