@@ -25,6 +25,7 @@ import "../styles/patria-refresh.css";
 import "../styles/modern-minimal.css";
 import "../styles/portfolio-v2.css";
 import "../styles/agency-direction.css";
+import "../styles/redesign-2026.css";
 
 export const metadata: Metadata = {
   title: "Patria Ingeniería | Pavimentos y Agregados",

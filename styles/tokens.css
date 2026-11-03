@@ -1,13 +1,75 @@
-/* Paleta del logo de Patria. Las superficies usan solo estos colores y blanco. */
+/* Design tokens — Patria Ingeniería 2026
+ * Paleta de marca basada en el logo (azul Patria, grafito, plata).
+ * Escalas tipográficas y de espaciado para un sistema coherente.
+ */
 :root {
+  /* Marca */
   --brand-blue: #01557b;
-  --brand-blue-deep: #000000;
+  --brand-blue-500: #01557b;
+  --brand-blue-600: #014b6c;
+  --brand-blue-700: #013e59;
+  --brand-blue-800: #002b40;
+  --brand-blue-900: #001a26;
+  --brand-blue-100: #e1eef4;
+  --brand-blue-50: #f3f8fb;
+
+  --brand-blue-deep: #000a12;
   --brand-blue-light: #ccd1d4;
   --brand-graphite: #4f565e;
+  --brand-graphite-700: #3a4046;
   --brand-silver: #ccd1d4;
-  --brand-black: #000000;
+  --brand-silver-200: #e6e9eb;
+  --brand-silver-100: #f3f5f6;
+  --brand-black: #0b0f12;
   --brand-white: #ffffff;
   --brand-canvas: #ffffff;
-  --brand-border: var(--brand-silver);
-  --brand-error: #000000;
+  --brand-border: #e1e4e6;
+  --brand-error: #c0392b;
+
+  /* Acento operativo (señalización vial, sin violar la paleta de marca) */
+  --accent-amber: #f2a900;
+  --accent-amber-dark: #c98a00;
+
+  /* Alias semánticos */
+  --bg: var(--brand-canvas);
+  --bg-muted: var(--brand-silver-100);
+  --bg-dark: var(--brand-blue-900);
+  --bg-ink: var(--brand-black);
+  --fg: var(--brand-black);
+  --fg-muted: var(--brand-graphite);
+  --fg-on-dark: #e8eef2;
+  --fg-on-dark-muted: #9aa6ad;
+  --line: var(--brand-border);
+  --line-dark: rgba(255,255,255,.14);
+
+  /* Tipografías */
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Manrope', 'Inter', system-ui, sans-serif;
+  --font-mono: 'DM Mono', 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Escala de tamaños */
+  --fs-eyebrow: 11px;
+  --fs-body: 15px;
+  --fs-lead: 17px;
+  --fs-h3: clamp(20px, 2vw, 26px);
+  --fs-h2: clamp(32px, 4.5vw, 56px);
+  --fs-h1: clamp(44px, 7.5vw, 96px);
+
+  /* Espaciado y radios */
+  --space-section: clamp(72px, 9vw, 128px);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px rgba(1, 25, 40, .06), 0 1px 3px rgba(1, 25, 40, .08);
+  --shadow-md: 0 6px 24px rgba(1, 25, 40, .08), 0 2px 6px rgba(1, 25, 40, .06);
+  --shadow-lg: 0 20px 60px rgba(1, 25, 40, .14);
+
+  /* Movimiento */
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --dur-fast: 180ms;
+  --dur-med: 320ms;
+  --dur-slow: 560ms;
 }
