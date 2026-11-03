@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"; // <-- 1. Importa Speed Insights aquí
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ExperienceShell } from "@/components/ui/experience-shell";
@@ -30,5 +32,19 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="es"><body><ExperienceShell><SiteHeader /><main>{children}</main><SiteFooter /><WhatsAppButton /><CookieConsent /></ExperienceShell></body></html>;
+  return (
+    <html lang="es">
+      <body>
+        <ExperienceShell>
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
+          <WhatsAppButton />
+          <CookieConsent />
+        </ExperienceShell>
+        <Analytics />
+        <SpeedInsights /> {/* <-- 2. Añade el componente SpeedInsights aquí */}
+      </body>
+    </html>
+  );
 }
