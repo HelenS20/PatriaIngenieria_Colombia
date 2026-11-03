@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 const slides = [
   {
@@ -60,29 +61,90 @@ export function Hero() {
 
   const slide = slides[active];
 
-  return <section className="heroEdge" aria-label="Presentación de Patria Ingeniería">
-    <svg className="heroNetwork" viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g fill="none" stroke="currentColor" strokeWidth="1"><path d="M0 80 96 114 164 53 250 94 343 48 408 106 529 38 600 76M0 261 78 201 163 258 257 194 370 252 465 189 600 230M96 114l-18 87m86-148-1 205m87-164 7 100m86-146 27 204m38-146 57 83m64-151-64 151" /></g>
-      <g fill="currentColor"><circle cx="96" cy="114" r="3"/><circle cx="164" cy="53" r="2"/><circle cx="250" cy="94" r="3"/><circle cx="343" cy="48" r="2"/><circle cx="408" cy="106" r="3"/><circle cx="529" cy="38" r="2"/><circle cx="78" cy="201" r="2"/><circle cx="163" cy="258" r="3"/><circle cx="257" cy="194" r="2"/><circle cx="370" cy="252" r="3"/><circle cx="465" cy="189" r="2"/></g>
-    </svg>
+  return (
+    <section className="relative min-h-[700px] flex items-center bg-zinc-900" aria-label="Presentación de Patria Ingeniería">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <p className="text-xs font-bold tracking-widest uppercase text-zinc-400">
+              {slide.eyebrow}
+            </p>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+              {slide.first}
+              <br />
+              <span className="text-zinc-300">{slide.accent}</span>
+            </h1>
+            <p className="text-lg text-zinc-400 max-w-xl leading-relaxed">
+              {slide.description}
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href={slide.href}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-zinc-900 font-semibold text-sm hover:bg-zinc-100 transition-colors border border-zinc-200"
+              >
+                Explorar portafolio
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/contacto"
+                className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold text-sm hover:text-zinc-300 transition-colors border border-zinc-700"
+              >
+                Hablemos de tu proyecto
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
 
-    <div className="heroEdgeCopy" key={`copy-${active}`}>
-      <p className="eyebrow">{slide.eyebrow}</p>
-      <h1>{slide.first}<br /><i>{slide.accent}</i></h1>
-      <p className="heroEdgeLead">{slide.description}</p>
-      <div className="heroEdgeActions"><Link className="heroEdgePrimary" href={slide.href}>Explorar portafolio <span aria-hidden="true">↗</span></Link><Link className="heroEdgeSecondary" href="/contacto">Hablemos de tu proyecto <span aria-hidden="true">→</span></Link></div>
-    </div>
+          <div className="relative h-[400px] lg:h-[500px] bg-zinc-800 border border-zinc-700">
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              priority={active === 0}
+              sizes="(max-width: 850px) 100vw, 48vw"
+              className="object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-zinc-900/90 border-t border-zinc-700">
+              <div className="flex justify-between items-center text-zinc-400 text-xs">
+                <span>0{active + 1} / 0{slides.length}</span>
+                <span className="text-white font-medium">{slide.category}</span>
+                <span>IMAGEN ILUSTRATIVA</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div className="heroEdgeVisual" key={`image-${active}`}>
-      <Image src={slide.image} alt={slide.alt} fill priority={active === 0} sizes="(max-width: 850px) 100vw, 48vw" />
-      <div className="heroEdgeVisualTag"><span>0{active + 1} / 0{slides.length}</span><strong>{slide.category}</strong><small>IMAGEN ILUSTRATIVA</small></div>
-    </div>
-
-    <div className="heroEdgeControls" aria-label="Controles de la portada">
-      <div className="heroEdgeDots">{slides.map((item, index) => <button key={item.category} type="button" aria-label={`Mostrar ${item.category}`} aria-current={active === index ? "true" : undefined} onClick={() => setActive(index)}><span /></button>)}</div>
-      <span className="heroEdgeCount">0{active + 1} / 0{slides.length}</span>
-      <button className="heroEdgePause" type="button" aria-label={paused ? "Reanudar carrusel" : "Pausar carrusel"} aria-pressed={paused} onClick={() => setPaused((value) => !value)}>{paused ? "▶" : "Ⅱ"}</button>
-      <div className="heroEdgeProgress" key={`progress-${active}`}><span className={paused || reducedMotion ? "is-paused" : ""} /></div>
-    </div>
-  </section>;
+        <div className="mt-12 pt-8 border-t border-zinc-800">
+          <div className="flex items-center justify-between gap-6">
+            <div className="flex items-center gap-3">
+              {slides.map((item, index) => (
+                <button
+                  key={item.category}
+                  type="button"
+                  aria-label={`Mostrar ${item.category}`}
+                  aria-current={active === index ? "true" : undefined}
+                  onClick={() => setActive(index)}
+                  className={`w-12 h-1 rounded-sm transition-colors ${
+                    active === index ? "bg-white" : "bg-zinc-700 hover:bg-zinc-600"
+                  }`}
+                />
+              ))}
+            </div>
+            <span className="text-zinc-400 text-xs">
+              0{active + 1} / 0{slides.length}
+            </span>
+            <button
+              type="button"
+              aria-label={paused ? "Reanudar carrusel" : "Pausar carrusel"}
+              aria-pressed={paused}
+              onClick={() => setPaused((value) => !value)}
+              className="text-zinc-400 text-xs hover:text-white transition-colors"
+            >
+              {paused ? "▶ REANUDAR" : "❚❚ PAUSAR"}
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

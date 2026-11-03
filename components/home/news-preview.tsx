@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { NewsGrid } from "@/components/news/news-grid";
 import { SectionHeading } from "@/components/ui/section-heading";

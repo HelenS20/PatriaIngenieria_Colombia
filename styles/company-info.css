@@ -1,0 +1,159 @@
+/* Página de información institucional - Diseño industrial y limpio */
+
+.companyInfoPage {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: clamp(80px, 10vw, 130px) var(--page-gutter) clamp(60px, 8vw, 100px);
+  background: var(--brand-canvas);
+  color: var(--brand-black);
+}
+
+.companyBackLink {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: clamp(28px, 4vw, 50px);
+  padding: 8px 0;
+  color: var(--brand-blue);
+  font: 700 11px 'DM Mono', monospace;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.companyBackLink:hover {
+  color: var(--brand-blue-light);
+  border-bottom-color: var(--brand-blue-light);
+}
+
+.companyContent {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 4.5vw, 55px);
+}
+
+.companyHeader {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 2.5vw, 28px);
+}
+
+.companyHeader .eyebrow {
+  color: var(--brand-blue);
+  font: 500 11px 'DM Mono', monospace;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 1;
+}
+
+.companyHeader h1 {
+  font: 700 clamp(48px, 6.5vw, 92px) 'Space Grotesk', sans-serif;
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+  margin: 0;
+  color: var(--brand-black);
+}
+
+.companyHeader .articleLead {
+  font: 500 clamp(19px, 2.2vw, 24px) 'Space Grotesk', sans-serif;
+  line-height: 1.5;
+  max-width: 680px;
+  margin: 0;
+  color: var(--body-muted);
+}
+
+.companyBody {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 32px);
+  padding-top: clamp(20px, 3vw, 35px);
+  border-top: 1px solid var(--brand-border);
+}
+
+.companyBody p {
+  max-width: 700px;
+  margin: 0;
+  font-size: clamp(14px, 1.4vw, 16px);
+  line-height: 1.85;
+  color: var(--body-muted);
+}
+
+.companyContact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  padding-top: clamp(16px, 2.5vw, 28px);
+  margin-top: clamp(16px, 2.5vw, 28px);
+  border-top: 1px solid var(--brand-border);
+}
+
+.companyContact .textLink {
+  color: var(--brand-blue);
+  font-weight: 700;
+  border-bottom: 1px solid var(--brand-blue);
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.companyContact .textLink:hover {
+  color: var(--brand-blue-light);
+  border-bottom-color: var(--brand-blue-light);
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .companyInfoPage {
+    padding: 70px var(--page-gutter) 60px;
+  }
+
+  .companyBackLink {
+    margin-bottom: 30px;
+  }
+
+  .companyContent {
+    gap: 28px;
+  }
+
+  .companyHeader {
+    gap: 20px;
+  }
+
+  .companyHeader .articleLead {
+    max-width: 100%;
+  }
+
+  .companyBody {
+    padding-top: 25px;
+    gap: 24px;
+  }
+
+  .companyBody p {
+    max-width: 100%;
+  }
+
+  .companyContact {
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .companyInfoPage {
+    padding: 60px var(--page-gutter) 50px;
+  }
+
+  .companyHeader h1 {
+    line-height: 0.95;
+  }
+
+  .companyHeader .articleLead {
+    font-size: 18px;
+  }
+
+  .companyBody p {
+    font-size: 14px;
+  }
+}

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"; // <-- 1. Importa Speed Insights aquí
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ExperienceShell } from "@/components/ui/experience-shell";
 import { CookieConsent } from "@/components/ui/cookie-consent";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { Inter, DM_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import "../styles/tokens.css";
 import "./interactive.css";
@@ -25,6 +26,27 @@ import "../styles/patria-refresh.css";
 import "../styles/modern-minimal.css";
 import "../styles/portfolio-v2.css";
 import "../styles/agency-direction.css";
+import "../styles/company-info.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-dm-mono",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Patria Ingeniería | Pavimentos y Agregados",
@@ -33,8 +55,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
-      <body>
+    <html lang="es" className={`${inter.variable} ${dmMono.variable} ${spaceGrotesk.variable}`}>
+      <body className="font-sans antialiased">
         <ExperienceShell>
           <SiteHeader />
           <main>{children}</main>
@@ -43,7 +65,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <CookieConsent />
         </ExperienceShell>
         <Analytics />
-        <SpeedInsights /> {/* <-- 2. Añade el componente SpeedInsights aquí */}
+        <SpeedInsights />
       </body>
     </html>
   );

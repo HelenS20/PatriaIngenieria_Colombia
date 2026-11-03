@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ApplicationForm } from "@/components/careers/application-form";
 import { JobsList } from "@/components/careers/jobs-list";
